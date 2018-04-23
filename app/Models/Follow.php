@@ -19,6 +19,6 @@ class Follow extends Model
 
     public function activities()
     {
-        return $this->morphMany(Activite::class);
+        return $this->morphMany(Activity::class);
     }
 }
