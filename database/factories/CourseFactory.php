@@ -4,6 +4,7 @@ use Faker\Generator as Faker;
 
 $factory->define(App\Models\Course::class, function (Faker $faker) {
     $name = $faker->sentence(2);
+
     return [
         'name' => $name,
         'slug' => str_slug($name),

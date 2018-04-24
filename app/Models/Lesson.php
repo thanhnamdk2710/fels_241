@@ -30,4 +30,8 @@ class Lesson extends Model
     {
         return $this->hasMany(Word::class);
     }
+
+    public function getImage() {
+        return asset(config('settings.direct_images') . $this->image);
+    }
 }

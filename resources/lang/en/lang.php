@@ -20,5 +20,9 @@ return [
         'description' =>' Sets of lessons, carefully selected for the best English learning experience.',
         'lesson' => 'Lessons',
         'details' => 'Details'
+    ],
+    'lesson' => [
+        'lessons' => 'Lessons',
+        'level' => 'Level',
     ]
 ];
