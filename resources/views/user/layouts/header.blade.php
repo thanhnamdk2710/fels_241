@@ -13,12 +13,13 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active">
+                <li>
                     <a href="#">@lang('lang.nav.home')
                         <span class="sr-only">(@lang('lang.nav.current')</span>
                     </a>
                 </li>
                 <li><a href="{{ route('user.courses') }}">@lang('lang.nav.course')</a></li>
+                <li><a href="{{ route('user.words') }}">@lang('lang.nav.words')</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
