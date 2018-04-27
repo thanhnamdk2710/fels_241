@@ -11,10 +11,10 @@
                 @if(count($courses))
                     @foreach($courses as $cours)
                         <div class="col-md-6">
-                            <a href="#" class="course-button">
+                            <a href="{{ route('user.lessons', $cours->slug) }}" class="course-button">
                                 <div class="course-image">
                                     <img class="img-responsive"
-                                         src="{{ asset(config('settings.direct_images') . $cours->image) }}" alt="">
+                                         src="{{ $cours->getImage() }}" alt="">
                                 </div>
                                 <div class="course-details">
                                     <div class="course-header">
