@@ -13,8 +13,7 @@
                         <div class="col-md-6">
                             <a href="{{ route('user.lessons', $cours->slug) }}" class="course-button">
                                 <div class="course-image">
-                                    <img class="img-responsive"
-                                         src="{{ $cours->getImage() }}" alt="">
+                                    <img class="img-responsive" src="{{ $cours->getImage() }}" alt="">
                                 </div>
                                 <div class="course-details">
                                     <div class="course-header">

@@ -21,4 +21,9 @@ class Course extends Model
     public function getImage() {
         return asset(config('settings.direct_images') . $this->image);
     }
+
+    public function getName()
+    {
+        return str_limit($this->name, 20, '...');
+    }
 }

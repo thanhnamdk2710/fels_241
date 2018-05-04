@@ -7,7 +7,8 @@ return [
     'nav' => [
         'brand' => 'Framgia E-Learning System',
         'home' => 'Home',
-        'course' => 'Course',
+        'course' => 'Courses',
+        'words' => 'Words',
         'icon_toggle' => 'Toggle navigation',
         'current' => 'current',
         'user' => 'User',
@@ -24,5 +25,6 @@ return [
     'lesson' => [
         'lessons' => 'Lessons',
         'level' => 'Level',
+        'words' => 'Words'
     ]
 ];

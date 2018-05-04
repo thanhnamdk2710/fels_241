@@ -16,4 +16,8 @@ class Word extends Model
     {
         return $this->belongsTo(Lesson::class);
     }
+
+    public function getName() {
+        return ucfirst($this->name);
+    }
 }

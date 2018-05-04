@@ -31,7 +31,13 @@ class Lesson extends Model
         return $this->hasMany(Word::class);
     }
 
-    public function getImage() {
+    public function getImage()
+    {
         return asset(config('settings.direct_images') . $this->image);
+    }
+
+    public function getName()
+    {
+        return str_limit($this->name, 20, '...');
     }
 }

@@ -8,7 +8,7 @@
                      src="{{ $course->getImage() }}" alt="">
             </div>
             <div class="inner">
-                <h1>{{ $course->name }}</h1>
+                <h1>{{ $course->getName() }}</h1>
                 <p>
                     {{ count($course->lessons) }} @lang('lang.lesson.lessons') -
                     @lang('lang.lesson.level'):
@@ -26,7 +26,8 @@
                 @if (count($lessons))
                     <div class="title">@lang('lang.lesson.lessons'):</div>
                     @foreach ($lessons as $key => $lesson)
-                        <a href="#" class="course-page-lesson {{ ($key % 2 == 0) ? 'even' : 'odd'}}">
+                        <a href="{{ route('user.lessonDetails', $lesson->slug) }}"
+                            class="course-page-lesson {{ ($key % 2 == 0) ? 'even' : 'odd'}}">
                             <div class="lesson-left">
                                 <span class="lesson-listnumber">#{{ $loop->iteration }}</span>
                                 <span class="lesson-image">
@@ -34,6 +35,9 @@
                                 </span>
                                 <span class="lesson-title">
                                     {{ $lesson->name }}
+                                </span>
+                                <span class="lesson-number">
+                                    - {{ count($lesson->words) }} @lang('lang.lesson.words')
                                 </span>
                             </div>
                         </a>
