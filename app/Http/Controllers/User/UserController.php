@@ -10,6 +10,16 @@ use App\Http\Controllers\Controller;
 
 class UserController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    public function index()
+    {
+        return view('user.home');
+    }
+
     public function courses()
     {
         $courses = Course::orderBy('level_completed')->paginate(config('settings.paginate_course'));

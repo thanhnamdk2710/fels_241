@@ -14,9 +14,9 @@ class AddFieldToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('language')->after('password');
-            $table->string('avatar')->after('language');
-            $table->tinyInteger('level')->after('avatar');
+            $table->string('language')->nullable()->after('password');
+            $table->string('avatar')->nullable()->after('language');
+            $table->tinyInteger('level')->nullable()->after('avatar');
         });
     }
 

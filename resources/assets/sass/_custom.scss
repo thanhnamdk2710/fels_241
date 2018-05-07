@@ -1,3 +1,7 @@
+body {
+   margin-bottom: 70px;
+}
+
 .course-list {
    display: flex;
    flex-wrap: wrap;
@@ -194,7 +198,12 @@
 
 footer {
    background: $panel-default-heading-bg;
-   padding: 30px 0;
+   padding: 15px 0;
    border-top: 1px solid #d3e0e9;
    margin-top: 20px;
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   z-index: 999;
 }
